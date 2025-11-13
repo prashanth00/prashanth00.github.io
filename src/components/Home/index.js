@@ -65,7 +65,7 @@ const Home = () => {
               idx={23}
             />
           </h1>
-          <h2>RHCSA / CCNA / React </h2>
+          <h2>React JS / Java / Spring boot</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
@@ -77,6 +77,10 @@ const Home = () => {
           >
             DOWNLOAD MY RESUME
           </a>
+
+          <Link to="/projects" className="flat-button">
+            VIEW PROJECTS
+          </Link>
           <Logo />
         </div>
         {/* set h1 tag here */}
