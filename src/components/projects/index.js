@@ -51,9 +51,9 @@ const Projects = () => {
     <div className="container projects-page">
       <div className="text-zone">
         <h1 className="page-title">Projects</h1>
-        <p className="page-subtitle">
+        {/* <p className="page-subtitle">
           A selection of deployed work. Each iframe renders the live site.
-        </p>
+        </p> */}
         <div className="projects-grid" style={layoutStyles.grid}>
           {projects.map((p) => (
             <div key={p.id} className="project-card" style={layoutStyles.card}>
