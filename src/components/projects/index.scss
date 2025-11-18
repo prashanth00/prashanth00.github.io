@@ -35,30 +35,37 @@
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 35px;
-    @media (max-width: 576px) {
-      gap: 25px;
-      grid-template-columns: 1fr;
-    }
+    // small screens: stack vertically
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: visible;
+    padding-bottom: 0;
+
+    // remove old CSS grid rules
+    // grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    // ...existing code...
   }
 
   .project-card {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid #ffd700;
-    border-radius: 12px;
-    padding: 16px 18px 24px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    position: relative;
-    overflow: hidden;
+    // full width on small screens
+    flex: 1 1 auto;
+    max-width: 80%;
+    // ...existing code...
+  }
 
-    &:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.55);
+  // Large screens: side-by-side row (50% each)
+  @media (min-width: 992px) {
+    .projects-grid {
+      flex-direction: row;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .project-card {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-width: 0;
     }
   }
 
@@ -71,6 +78,11 @@
     position: relative;
     background: #111;
     border: 1px solid #222;
+    box-sizing: border-box; // include padding/border in width
+    padding: clamp(8px, 2vw, 16px);
+    border: 2px solid #2b2b2b; // clearer border
+    border-radius: clamp(8px, 1.5vw, 12px);
+    margin: clamp(8px, 2vw, 16px) 0 clamp(14px, 3vw, 22px);
 
     iframe {
       width: 100%;
