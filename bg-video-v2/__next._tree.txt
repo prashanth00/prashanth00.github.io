@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/04za3hu5nilvo.css","style"]
+:HL["/_next/static/chunks/0mak~qfnyeqy0.css","style"]
+:HC["/",""]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"bg-video-v2","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"_XtmQHWa3kriD4H-kTLyt"}
